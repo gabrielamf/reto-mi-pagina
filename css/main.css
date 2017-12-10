@@ -62,10 +62,28 @@ nav {
 .nav-right {
 	float: right;
 	position: relative;
+	list-style: none;
+}
+.nav-right li {
+	display: inline-block;
+}
+.nav-right li a {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 100;
+	padding: .6em;
+}
+
+.nav-right li a:hover {
+	font-weight: 300;
+	border-bottom: 2px solid #ffffff;
+	font-size: 1.1em;
+	color: rgb(83, 99, 102);
+
 }
 .overlay {
 	background: rgba(0, 0, 0, 0.6);
-	padding: 3em 0;
+	padding: 2em 0;
 	color: #ffffff;
 	height: 100vh;
 }
@@ -75,7 +93,7 @@ nav {
 }
 .overlay h2 {
 	font-weight: 100;
-	font-size: 7em;
+	font-size: 6em;
 }
 
 .bg-header {
@@ -152,10 +170,33 @@ nav {
 	display: none;
 }
 
+
+
 .container-footer {
 	overflow: auto;
 	background-color: rgb(114, 126, 136);
 	color:  #ffffff;
 	font-weight: 100;
 	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.view-mobile {
+		display:none;
+	}
+
+	.view-desktop {
+		display: block;
+	}
+
+	header a.logo {
+		font-size: 1.6em;
+		font-weight: 300;
+	}
+
+	.container-footer {
+		font-size: 1.5em;
+		padding: 1em 0;
+	}
+
 }
