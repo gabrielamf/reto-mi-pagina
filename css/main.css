@@ -3,7 +3,7 @@
   position: absolute;
   top: .7em;
   right: 1em;
-  height: 1px;
+  height: 2px;
 	width: 2.5em;
 	background: #ffffff;
 }
@@ -11,7 +11,7 @@
 .main-hamburger::before, .main-hamburger::after {
   position: absolute;
   content: '';
-  height: 1px;
+  height: 2px;
   width: 2.5em;
   display: block;
   background: #ffffff;
@@ -37,21 +37,20 @@
 	text-align: center;
 }
 
-header {
-	background-color: #FDC331;
-}
-
 header a.logo {
   font-size: 1.3em;
 	font-weight: 100;
-	outline: 1px solid red;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 nav {
 	overflow: auto;
-	padding: 1.5em 1em;
+	padding: 1.5em 2em;
+	background-color: #FDC331;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
 }
 
 .nav-left {
@@ -64,9 +63,11 @@ nav {
 	position: relative;
 	list-style: none;
 }
+
 .nav-right li {
 	display: inline-block;
 }
+
 .nav-right li a {
 	color: #ffffff;
 	text-decoration: none;
@@ -79,18 +80,20 @@ nav {
 	border-bottom: 2px solid #ffffff;
 	font-size: 1.1em;
 	color: rgb(83, 99, 102);
-
 }
+
 .overlay {
 	background: rgba(0, 0, 0, 0.6);
 	padding: 2em 0;
 	color: #ffffff;
-	height: 100vh;
+	height: 91.5vh;
 }
+
 .overlay h1 {
 	font-weight: 300;
 	font-size: 3em;
 }
+
 .overlay h2 {
 	font-weight: 100;
 	font-size: 6em;
@@ -102,6 +105,7 @@ nav {
 	background-size: cover;
 	background-position: center center;
 	height: 100vh;
+	padding-top: 3.5em;
 }
 
 .information-title {
@@ -148,6 +152,7 @@ nav {
 	font-weight: 300;
 	padding-bottom: 1em;
 }
+
 .btn {
 	background-color: #FDC331;
 	color: #ffffff;
@@ -169,8 +174,6 @@ nav {
 .view-desktop {
 	display: none;
 }
-
-
 
 .container-footer {
 	overflow: auto;
@@ -198,6 +201,13 @@ nav {
 		font-size: 1.5em;
 		padding: 1em 0;
 	}
+
+	.bg-header {
+		height: 29em;
+	}
+	.overlay {
+		height: 25.5em;
+	}
 }
 
 @media (min-width: 1200px) {
@@ -207,5 +217,12 @@ nav {
 
 	.view-desktop {
 		display: block;
+	}
+
+	.bg-header {
+		height: 25em;
+	}
+	.overlay {
+		height: 21.5em;
 	}
 }
